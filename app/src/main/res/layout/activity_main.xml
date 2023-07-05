@@ -24,7 +24,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btn_reset"
+        android:id="@+id/btn_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:text=".00"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_reset"
+        app:layout_constraintBottom_toTopOf="@+id/btn_refresh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_second"
