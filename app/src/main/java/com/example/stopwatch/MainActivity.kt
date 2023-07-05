@@ -42,10 +42,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     start()
                 }
             }
+            R.id.btn_refresh -> {
+                refresh()
+            }
         }
     }
 
     private fun pause() {
+        btn_start.text = "시작"
+        btn_start.setBackgroundColor(getColor(R.color.blue))
+        isRunning = false
+        timer?.cancel() // 타이머 멈추기
     }
 
     private fun start() {
@@ -71,7 +78,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun refresh() {
+        timer?.cancel()
 
+        btn_start.text = "시작"
+        btn_start.setBackgroundColor(getColor(R.color.blue))
+        isRunning = false
+
+        time = 0
+        tv_millisecond.text = ".00"
+        tv_second.text = ":00"
+        tv_minute.text = "00"
     }
 }
 
